@@ -31,19 +31,24 @@ main.o: main.c
 	gcc -c main.c
 
 #EXECUTAR VIA TERMINAL LINUX
-##### TARGET3: ROTINA #####
-rotina:
-	sudo apt update
-	sudo apt upgrade
-	sudo apt autoremove && sudo apt autoclean
+#### TARGET3: ROTINA #####
+rotina: comando.o
+	gcc comando.o -o rotina	
+	./rotina
+	rm comando.o && rm rotina
+
+comando.o: comando.c
+	gcc -c comando.c
+
 
 ##### TARGET4: PROGRAMAS #####
 apps = brave-browser discord libreoffice vlc gimp inkscape
 ferramentas = build-essential git gnome-tweaks vim make
 instalar_programas:
 	sudo apt update
-	sudo apt install ${ferramentas}
-	sudo apt install ${apps}
+	sudo apt install -y ${ferramentas}
+	sudo apt install -y ${apps}
+	echo "Instalacao Finalizada!"
 
 ##### TARGET5: TAREFAS #####
 minhas_tarefas: tarefas.o
@@ -58,26 +63,6 @@ tarefas.o: tarefas.c
 # APRENDIZADO
 #-o -> permite nomear o nome
 #-c -> compilar
-#PARTE 1: programa_final->
-#name_program: .o
-#	gcc .o -o name
-#	./name
-#	rm name
-#
-#PARTE2:
-#.o: .c
-#gcc -c .c
-#
-#
-#
 #SEMPRE COLOCAR ./NOME
 # É PONTO E BARRA ./ ./
-# É PONTO E BARRA ./ ./
-# É PONTO E BARRA ./ ./
-# É PONTO E BARRA ./ ./
-#1 HORA CORRINGO ESSA PORCARIA!!!
-#TERMINAL/CMD LINUX NAO VSCODE
-#TERMINAL/CMD LINUX NAO VSCODE
-#TERMINAL/CMD LINUX NAO VSCODE
-#TERMINAL/CMD LINUX NAO VSCODE
 #TERMINAL/CMD LINUX NAO VSCODE
