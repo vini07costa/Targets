@@ -1,6 +1,7 @@
 # README
 # **AVISO:APLICAR ESTE COMANDO:** `chmod 707 makefile`
 
+### **NOME: Vinicius Alves Costa**
 
 ### TARGET 1: FACULDADE
 Criar diretorios com os nomes dos conteudos do 1 semestre
